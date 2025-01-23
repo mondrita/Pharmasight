@@ -1,0 +1,97 @@
+.profile-container {
+    position: relative; /* Ensures the overlay can cover the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('/assets/images/2.jpeg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Prevents any overflow from the overlay */
+}
+
+.profile-container::before {
+    content: ""; /* Creates the overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Places the overlay below the content */
+    pointer-events: none; /* Ensures the overlay doesn't block interactions */
+}
+
+.profile-card {
+    position: relative; /* Stays above the overlay */
+    z-index: 2; /* Ensures it's above the overlay */
+    background: rgba(255, 255, 255, 0.8); /* Slightly opaque white background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adds a softer shadow */
+    text-align: center;
+    width: 400px;
+    backdrop-filter: blur(10px); /* Gives the card a glassmorphic effect */
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid white; /* Add a white border around the profile picture */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow around the profile picture */
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #555; /* Slightly darker text for better visibility */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555; /* Label text color */
+}
+
+form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque input background */
+    pointer-events: none; /* Make inputs non-editable */
+    font-size: 1rem;
+    color: #333;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.back-button i {
+    margin-right: 5px;
+}

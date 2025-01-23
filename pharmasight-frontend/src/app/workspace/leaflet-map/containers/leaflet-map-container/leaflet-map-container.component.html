@@ -1,0 +1,53 @@
+<div class="map-container" style="position: relative;">
+    <app-menu></app-menu>
+
+    <app-map
+            [divisionsDataList]="divisionsDataList"
+            [isShowDivisionDetails]="isShowDivisionDetails"
+            (showDistrictsEvent)="getDistrictCoordinates($event)"
+            [boundary]="boundary"
+            [districtDataList]="districtDataList"
+    />
+
+    <div class="search-form-overlay">
+        @if (!isOpenSearchForm) {
+            <div class="search-bar" id="searchBar">
+                <input type="text" placeholder="Search" readonly (click)="openModal()" />
+                <i class="fas fa-search"></i>
+            </div>
+        } @else {
+            <app-search-form
+                    (searchParamEmitter)="searchHandler($event)"
+                    (close)="closeModal()"
+                    (genericDataChange)="updateGenericData($event)"
+            ></app-search-form>
+
+        }
+    </div>
+
+    @if(isShowResults) {
+        <div class="show-results-overlay">
+            <app-show-results
+
+                    *ngIf="isShowResults"
+
+
+                    [divisionName]="divisionName"
+                    [isShowDivisionDetails]="isShowDivisionDetails"
+                    [divisionsDataList]="divisionsDataList"
+                    [districtDataList]="districtDataList"
+                    [topBrandList]="topBrandList"
+                    [marketShareList]="marketShareList"
+                    [totalBdSales]="salesToShow"
+                    (showDistrictsEvent)="getDistrictCoordinates($event)"
+
+                    (tabClickEvent)="getTabWiseData($event)"
+                    [genericData]="genericData"
+                    [searchParamData]="searchParamData"
+
+
+                    (goBackEvent)="handleGoBack()"
+            ></app-show-results>
+        </div>
+    }
+</div>

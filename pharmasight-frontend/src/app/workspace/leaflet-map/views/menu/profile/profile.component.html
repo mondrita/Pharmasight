@@ -1,0 +1,20 @@
+<div class="profile-container">
+    <button class="back-button" (click)="navigateBack()">
+        <i class="fas fa-arrow-left"></i> Back
+    </button>
+    <div class="profile-card">
+        <img [src]="employee.profilePic" alt="Profile Picture" class="profile-pic" />
+        <h2>{{ employee.name }}</h2>
+        <p>Employee ID: {{ employee.id }}</p>
+        <form>
+            <label for="designation">Designation</label>
+            <input id="designation" type="text" [value]="employee.designation" readonly />
+
+            <label for="workstation">Workstation</label>
+            <input id="workstation" type="text" [value]="employee.workstation" readonly />
+
+            <label for="phoneNumber">Phone Number</label>
+            <input id="phoneNumber" type="text" [value]="employee.phoneNumber" readonly />
+        </form>
+    </div>
+</div>

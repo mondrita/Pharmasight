@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 24px 16px;
+    background-image: url("../../../../assets/images/signin_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.signin-form-background {
+    width: 100%;
+    max-width: 560px;
+    background: rgb(252, 250, 250);
+    border-radius: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.signin-form-title {
+    font-size: 48px;
+    color: #282b31;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.form-input-group {
+    margin-bottom: 20px;
+}
+
+.form-input-group input::placeholder {
+    color: #d9d9d9;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form-input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-input-group input {
+    width: 100%;
+    padding: 16px 8px;
+    border: 1px solid #80808080;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.forgot-password-link {
+    margin-top: 16px;
+    color: #343aa8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.validation-error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+.signin-submit-button {
+    width: 7rem;
+    padding: 12px;
+    background-color: #34a853;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.signin-submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+    .signin-form-background {
+        max-width: 80%;
+    }
+
+    .signin-form-title {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+
+    .form-input-group input {
+        padding: 14px 8px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .signin-form-container {
+        padding: 16px 12px;
+    }
+
+    .signin-form-background {
+        max-width: 90%;
+        padding: 16px;
+        margin: 0;
+    }
+
+    .signin-form-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .form-input-group {
+        margin-bottom: 16px;
+    }
+
+    .form-input-group label {
+        font-size: 14px;
+    }
+
+    .form-input-group input {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    .forgot-password-link {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .signin-submit-button {
+        width: 40%;
+        margin-top: 16px;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 320px) {
+    .signin-form-title {
+        font-size: 24px;
+    }
+
+    .signin-form-background {
+        padding: 12px;
+    }
+
+    .form-input-group input {
+        padding: 6px 6px;
+    }
+}

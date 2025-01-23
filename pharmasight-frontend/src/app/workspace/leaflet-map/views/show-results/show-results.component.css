@@ -1,0 +1,100 @@
+::ng-deep .nav-tabs {
+  --bs-nav-tabs-border-width: 0;
+  --bs-nav-tabs-border-color: 0;
+}
+::ng-deep .nav-link {
+  color: #808080;
+  font-size: 14px;
+  font-weight: 400;
+}
+::ng-deep .nav-tabs .nav-link.active {
+  font-weight: 700;
+  font-size: 14px;
+}
+::ng-deep .nav-tabs .nav-link:hover {
+  color: #000;
+}
+
+.title-style {
+  color: #282b31;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+.date-style {
+  color: #808080;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+.loc-text {
+  color: #808080;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.loc-val {
+  color: #282b31;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px;
+}
+.total-sales {
+  color: #808080;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.total-amount {
+  color: #282b31;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  border-bottom: none;
+  overflow-x: hidden;
+}
+
+.nav-tabs .nav-item {
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.nav-tabs .nav-link {
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  font-weight: 400;
+  color: #282b31;
+  white-space: nowrap;
+  border: none;
+}
+
+.nav-tabs .nav-link.active {
+  font-weight: 700;
+  color: #000;
+  border: none;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 15px;
+  color: #6f7273;
+}
+
+.icon-button:hover {
+  color: #101010;
+}
+
+.icon-button:focus {
+  outline: none;
+}
+

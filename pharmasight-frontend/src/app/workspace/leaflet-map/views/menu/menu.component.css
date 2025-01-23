@@ -1,0 +1,86 @@
+.menu-corner {
+    position: absolute; /* Creates a stacking context for dropdown-menu */
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2000; /* Ensure stacking context is above most elements */
+    opacity: 0.8;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #6c757d;
+}
+
+.menu-button:hover {
+    color: #000000;
+}
+
+.profile-picture img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.profile-picture img:hover {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    z-index: 3000; /* Ensure it appears above the show-results-overlay */
+    width: 150px;
+}
+
+
+.dropdown-item {
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.dropdown-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    color: #333;
+}
+
+.dropdown-profile-pic {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; /* Makes the profile picture round */
+    object-fit: cover;
+}

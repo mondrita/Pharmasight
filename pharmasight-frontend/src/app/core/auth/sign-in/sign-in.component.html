@@ -1,0 +1,59 @@
+<div class="signin-form-container">
+    <div class="signin-form-background">
+        <div class="signin-form-wrapper">
+            <h3 class="signin-form-title">Signin</h3>
+            <form [formGroup]="regForm" (ngSubmit)="onSignIn()" class="signin-form">
+                <div class="form-input-group">
+                    <label for="username">Enter your username or email address</label>
+                    <input
+                            placeholder="Enter your username"
+                            type="text"
+                            formControlName="username"
+                            id="username"
+                            appValidateField
+                    />
+                    <div *ngIf="regForm.get('username')?.touched && regForm.get('username')?.invalid" class="validation-error-message">
+                        <div *ngIf="regForm.get('username')?.errors?.['required']">
+                            <span>User name is required</span>
+                        </div>
+                        <div *ngIf="regForm.get('username')?.errors?.['validateField']">
+                            <span>{{ regForm.get('username')?.errors?.['validateField'] }}</span>
+                        </div>
+                        <div *ngIf="regForm.get('username')?.errors?.['maxlength']">
+                            <span>User name must not exceed 8 characters</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-input-group">
+                    <label for="password">Enter your Password</label>
+                    <input
+                            formControlName="password"
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Enter your password"
+                    />
+                    <div *ngIf="regForm.get('password')?.touched && regForm.get('password')?.invalid" class="validation-error-message">
+                        <div *ngIf="regForm.get('password')?.errors?.['required']">
+                            <span>Password is required</span>
+                        </div>
+                        <div *ngIf="regForm.get('password')?.errors?.['minlength']">
+                            <span>Password must be at least 6 characters long</span>
+                        </div>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-end">
+                        <a routerLink="/auth/forgot-password" class="forgot-password-link">
+                            Forgot Password?
+                        </a>
+                    </div>
+                </div>
+                <p class="text-danger">{{ errorMessage }}</p>
+                <div class="d-flex justify-content-end mt-5">
+                    <button type="submit" class="signin-submit-button" [disabled]="regForm.invalid">
+                        Signin
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="table-container" style="overflow-x: scroll; max-height: 380px">
+    <table class="table table-hover" style="padding: 0; margin: 0">
+        <thead>
+        <tr>
+            <th class="table-title">
+                {{ tableTabType === 'brands' ? 'Brand' : (showdistrict ? 'District' : 'Division') }}
+            </th>
+            <th class="table-title">Amount (taka)</th>
+        </tr>
+        </thead>
+        <tbody>
+            @for (item of data; track $index) {
+                <tr
+                        [class.non-clickable]="tableTabType === 'demographic' && showdistrict"
+                        (click)="
+            (tableTabType === 'demographic' && !showdistrict)
+              ? showDistrictsHandler(item)
+              : (tableTabType === 'brands'
+                ? showBrandDetails(item)
+                : '')
+        "
+                >
+                    <td style="color: #282b31; font-size: 14px">
+                        {{ item?.divisionName || item.districtName || item.drugName }}
+                    </td>
+                    <td style="text-align: right; font-size: 14px; font-weight: 700">
+                        @if (tableTabType !== "market_share") {
+                            <ng-container>৳</ng-container>
+                        }
+                        {{
+                            formatNumber(
+                                tableTabType === "market_share"
+                                    ? item.salesPercentage || 0
+                                    : tableTabType === "demographic"
+                                        ? item?.totalSales || item.districtSales || 0
+                                        : item.totalAmount || 0
+                            )
+                        }}
+                        @if (tableTabType === "market_share") {
+                            <ng-container>%</ng-container>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

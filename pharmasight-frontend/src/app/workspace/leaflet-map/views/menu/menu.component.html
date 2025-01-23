@@ -1,0 +1,36 @@
+<div class="menu-corner">
+    <button class="menu-button">
+        <i class="fas fa-cog"></i>
+    </button>
+    <button class="menu-button">
+        <i class="fas fa-bell"></i>
+    </button>
+    <div class="profile-picture" (click)="toggleDropdown()">
+        <img src="assets/images/cat.jpeg" alt="Profile">
+    </div>
+
+    <div class="dropdown-menu" *ngIf="isDropdownOpen">
+        <button class="dropdown-item" (click)="navigateToProfile()">
+            <img src="assets/images/cat.jpeg" alt="Profile Icon" class="dropdown-icon dropdown-profile-pic" />
+            Profile
+        </button>
+        <button class="dropdown-item" (click)="navigateToPrivacyPolicy()">
+            <i class="fas fa-file-alt dropdown-icon"></i>
+            Privacy Policy
+        </button>
+        <button class="dropdown-item" (click)="showSignOutModal()">
+            <i class="fas fa-sign-out-alt dropdown-icon"></i>
+            Sign Out
+        </button>
+    </div>
+</div>
+
+<app-confirmation-modal
+        [isVisible]="isModalVisible"
+        title="Sign out!"
+        message="Are you sure you want to sign out? Your unsaved changes may be lost."
+        confirmButtonText="Sign Out"
+        cancelButtonText="Cancel"
+        (confirm)="logout()"
+        (cancel)="hideModal()"
+/>

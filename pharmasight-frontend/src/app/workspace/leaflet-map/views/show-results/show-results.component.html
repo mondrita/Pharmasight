@@ -1,0 +1,159 @@
+<div class="container mt-1">
+    <!-- Division/Demographic Details -->
+    @if (!isShowDivisionDetails && !showBrandDetails) {
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h2 class="text-center mb-1 fs-5">Showing Result</h2>
+            <button
+                    class="icon-button"
+                    (click)="onDownloadExcel()"
+                    title="Download Excel"
+            >
+                <i class="fas fa-download"></i>
+            </button>
+
+        </div>
+    }
+
+    <!-- Brand Details Section -->
+    @if (showBrandDetails) {
+        <app-brand-details
+
+                *ngIf="showBrandDetails"
+                [brandDetailData]="brandDetailData"
+                (backEvent)="onGoBack()"
+        >
+
+        </app-brand-details>
+    }
+
+    <!-- Main Tabs Section -->
+    @if (!showBrandDetails) {
+        <div class="d-flex flex-column bg-white rounded-2 p-4">
+            <!-- Title and Dates -->
+            <div style="margin-bottom: 6px">
+                <h4 class="title-style">{{ genericData?.genericName }}</h4>
+                <p class="date-style">
+                    {{ genericData?.startDate }} - {{ genericData?.endDate }}
+                </p>
+            </div>
+            <!-- Location Display for Division Details -->
+            <div *ngIf="isShowDivisionDetails" class="mb-2">
+                <p class="loc-text">Location</p>
+                <h3 class="loc-val">{{ divisionName }}</h3>
+            </div>
+
+            <!-- Total Sales -->
+            <div>
+                <p class="total-sales">Total sales</p>
+                <h3 class="total-amount">৳{{ totalBdSales | number }}</h3>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div
+                class="d-flex flex-column bg-white rounded-2 mt-4"
+                style="padding: 10px 10px"
+        >
+            <ul class="nav nav-tabs justify-content-between" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button
+                            class="nav-link"
+                            [class.active]="activeTab === 'demographic'"
+                            id="tab1-btn"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab1"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab1"
+                            aria-selected="true"
+                            (click)="onTabClick('demographic')"
+                    >
+                        Demographic
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button
+                            class="nav-link"
+                            [class.disabled]="!isOtherTabsEnabled"
+                            [class.active]="activeTab === 'brands'"
+                            id="tab2-btn"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab2"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab2"
+                            aria-selected="false"
+                            (click)="onTabClick('brands')"
+                    >
+                        Top Brands
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button
+                            class="nav-link"
+                            [class.disabled]="!isOtherTabsEnabled"
+                            [class.active]="activeTab === 'market_share'"
+                            id="tab3-btn"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab3"
+                            type="button"
+                            role="tab"
+                            aria-controls="tab3"
+                            aria-selected="false"
+                            (click)="onTabClick('market_share')"
+                    >
+                        Market Share
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tab Content -->
+        <div
+                class="d-flex flex-column bg-white rounded-2 mt-4"
+                style="padding: 10px 10px"
+        >
+            <div class="tab-content" id="myTabContent">
+                <div
+                        class="tab-pane fade show active"
+                        id="tab1"
+                        role="tabpanel"
+                        aria-labelledby="tab1-btn"
+                >
+                    <app-table
+                            [tableTabType]="'demographic'"
+                            [divisionsDataList]="divisionsDataList"
+                            [districtDataList]="districtDataList"
+                            (showDistrictsEvent)="onShowDistricts($event)"
+                    ></app-table>
+                </div>
+                <div
+                        class="tab-pane fade"
+                        id="tab2"
+                        role="tabpanel"
+                        aria-labelledby="tab2-btn"
+                >
+                    <app-table
+                            [tableTabType]="'brands'"
+                            [topBrandList]="topBrandList"
+                            (showBrandDetailsEvent)="onShowBrandDetails($event)"
+                    ></app-table>
+                </div>
+                <div
+                        class="tab-pane fade"
+                        id="tab3"
+                        role="tabpanel"
+                        aria-labelledby="tab3-btn"
+                >
+                    <app-table
+                            [tableTabType]="'market_share'"
+                            [marketShareList]="marketShareList"
+                    ></app-table>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="showBrandDetails">
+            <app-brand-details [brandDetailData]="brandDetailData"></app-brand-details>
+        </div>
+    }
+</div>
