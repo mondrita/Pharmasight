@@ -1,6 +1,30 @@
 # Pharmasight
 
-A pharmaceutical Sales Data Visualization Tool
+**Pharmasight** is designed to provide users with an interactive platform to explore and analyze pharmaceutical sales data effectively. It’s tailored to the needs of pharmaceutical companies, sales teams, market analysts, and policymakers to ensure better decision-making through data-driven insights.
+
+---
+
+## Key Features
+
+### Comprehensive Search
+- Users can effortlessly locate sales data by applying four mandatory filters: **Generic**, **Vendor**, **Start Date**, and **End Date**.
+- The search results dynamically populate in both a **table** and a **map** format, ensuring clarity and convenience for users with varied preferences.
+
+### Interactive Visualization
+- Sales data is visually represented on an interactive **map of Bangladesh**, where each location is marked with sales performance metrics for quick identification.
+- Users can drill down into specific divisions by clicking on them. The selected division zooms in for a closer view, and its border is highlighted for clarity.
+- At the division level, district-wise sales data is displayed on the map, with each district marked distinctly to provide granular insights into sales distribution.
+
+### Actionable Insights
+- Dedicated insights on **top-performing drug brands** and their sales data are provided through separate tabs.
+- **Market share analysis** for each brand and drug is presented, allowing users to identify leading players and assess competitive performance.
+- Specific drug performance, including highest and lowest sales months and regions, is also highlighted to support strategic decision-making.
+
+### Data Export
+- Sales data can be seamlessly downloaded in **Excel format**.
+- This feature supports offline reporting and further detailed analysis, ensuring flexibility for users.
+
+---
 
 ## Tech Stack Summary
 
@@ -10,6 +34,8 @@ A pharmaceutical Sales Data Visualization Tool
 - **Mapping:** OpenStreetMap
 - **Security:** Spring Security
 - **Languages:** Java, TypeScript, HTML, CSS
+
+---
 
 ![Image](https://github.com/user-attachments/assets/432689c8-f1c5-4cf0-96c4-72c6035ba060)
 ![Image](https://github.com/user-attachments/assets/8709f116-0275-4b3a-90c4-9786f438fae8)
