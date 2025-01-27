@@ -2,6 +2,12 @@
 **Pharmasight**, a comprehensive sales data visualization platform designed to revolutionize pharmaceutical sales analysis in Bangladesh.
 Pharmasight is designed to provide users with an interactive platform to explore and analyze pharmaceutical sales data effectively. It’s tailored to the needs of pharmaceutical companies, sales teams, market analysts, and policymakers to ensure better decision-making through data-driven insights.
 
+## Live View
+
+You can access the live version of the project here: [Pharmasight Live Demo](https://pharmasight.jotno.dev)
+username: tahsin
+password: 123456
+
 ---
 
 [![IMAGE ALT TEXT HERE](https://github.com/user-attachments/assets/d45ed5aa-f749-4e6d-9c67-809f5047c38e)](https://www.youtube.com/watch?v=n3A1WkvVrKs)
