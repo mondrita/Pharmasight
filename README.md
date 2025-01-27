@@ -1,6 +1,6 @@
 # Pharmasight
-
-**Pharmasight** is designed to provide users with an interactive platform to explore and analyze pharmaceutical sales data effectively. It’s tailored to the needs of pharmaceutical companies, sales teams, market analysts, and policymakers to ensure better decision-making through data-driven insights.
+**Pharmasight**, a comprehensive sales data visualization platform designed to revolutionize pharmaceutical sales analysis in Bangladesh.
+Pharmasight is designed to provide users with an interactive platform to explore and analyze pharmaceutical sales data effectively. It’s tailored to the needs of pharmaceutical companies, sales teams, market analysts, and policymakers to ensure better decision-making through data-driven insights.
 
 ---
 
