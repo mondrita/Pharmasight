@@ -3,17 +3,11 @@
 A pharmaceutical Sales Data Visualization Tool
 
 Tech Stack 
-
 Backend: Spring Boot
-
 Frontend: Angular
-
 Database: MySQL
-
 Mapping: OpenStreetMap
-
 Security: Spring Security
-
 Languages: Java, TypeScript, HTML, CSS
 
 ![Image](https://github.com/user-attachments/assets/432689c8-f1c5-4cf0-96c4-72c6035ba060)
