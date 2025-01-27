@@ -73,3 +73,11 @@ Pharmasight is designed to provide users with an interactive platform to explore
 | `/register`                               | POST   | Register user                                | `User` (Request Body)                                    | `200 OK`: Returns the registered `User`.                                                         |
 | `/login`                                  | POST   | User login                                   | `UserLoginDTO` (Request Body)                            | `200 OK`: Returns a token or `401 Unauthorized`: Authentication failed.                          |
 | `/vendor/search`                          | GET    | Get vendor suggestions                       | `prefix` (String, query), `limit` (Integer, optional)    | `200 OK`: Returns a list of `VendorDTO` suggestions.                                             |
+
+
+## Contributors
+
+### Frontend & Backend
+- Mondrita Biswas  [GitHub](https://github.com/mondrita) | [LinkedIn](https://www.linkedin.com/in/mondrita-biswas-676127314/)
+- Rejaul Karim Ridhon  [GitHub](https://github.com/ridhonmatrix) | [LinkedIn](https://www.linkedin.com/in/ridhon/)
+
