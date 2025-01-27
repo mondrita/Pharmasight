@@ -40,7 +40,7 @@ Pharmasight is designed to provide users with an interactive platform to explore
 
 ---
 
-![Image](https://github.com/user-attachments/assets/432689c8-f1c5-4cf0-96c4-72c6035ba060)
+![Image](https://github.com/user-attachments/assets/9462384d-730f-4890-818f-b4da341608f5)
 ![Image](https://github.com/user-attachments/assets/8709f116-0275-4b3a-90c4-9786f438fae8)
 ![Image](https://github.com/user-attachments/assets/c9aa89ae-bd3a-41d2-9843-3c1d37f3b010)
 ![Image](https://github.com/user-attachments/assets/8158a271-63ac-4f63-a5f8-199120b2ca88)
