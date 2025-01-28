@@ -61,6 +61,12 @@ Pharmasight is designed to provide users with an interactive platform to explore
 ![Image](https://github.com/user-attachments/assets/c8a19308-66c3-4086-9950-80a6b749566c)
 ![Image](https://github.com/user-attachments/assets/8ceb6ede-fdcf-49e2-baad-b9513b7ea5c3)
 
+# ER Diagram
+
+![Image](https://github.com/user-attachments/assets/a5aa8e36-9749-481a-a621-792eaf18a9d0)
+
+---
+
 # API Documentation
 
 ## API Endpoints
